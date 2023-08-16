@@ -11,11 +11,22 @@ package com.example.core.controlstructure
 
 fun main(args: Array<String>) {
 
-    val number = 100
-    val result = if (number in 1..10){
+    val number = 1
+    val result = if (number in 1..10) {
         number
-    }else
+    } else
         throw IllegalArgumentException("Number out of range")
 
-   // println(result)
+    // println(result)
+
+    //val s = person.name ?: throw IllegalArgumentException("Name required")
+    val person = Person(null)
+    val s = person.name ?: fail("Name required")
+    println(s)
 }
+
+fun fail(message: String): Nothing {
+    throw IllegalArgumentException(message)
+}
+
+class Person(val name: String?)
