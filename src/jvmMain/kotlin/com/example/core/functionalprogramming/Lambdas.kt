@@ -54,8 +54,4 @@ fun main(args: Array<String>) {
     // if one of the parameters is not used, you can use underscore to denote that you don't need it
     map.mapValues { (_, value) -> "$value!"}
 
-
-
-
-
 }
