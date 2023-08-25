@@ -42,4 +42,10 @@ class Controller(
 class Controller1(
     val repository: Repository,
     val logger: Logger,
-): Repository by repository, Logger by logger
+): Repository by repository, Logger by logger{
+
+    //you can access methods of delegated interfaces
+    fun findById(id: Int): Customer{
+        return repository.getById(id)
+    }
+}
