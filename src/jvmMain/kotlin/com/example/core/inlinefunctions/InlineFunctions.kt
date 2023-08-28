@@ -51,6 +51,9 @@ fun main(args: Array<String>) {
     //jvm hot spot compiler can inline the function if it is called frequently
 
 
+    class Person(val name: String, val age: Int)
+    val people = listOf(Person("Alice", 29), Person("Bob", 31))
+    people.filter { it.age < 21 }.size
 
 
 }
